@@ -18,6 +18,7 @@ export default function BankActivity({ transactions = [], transfers = [] }) {
 
           {transactions.map((transaction) => (
 
+            // correct link with correct transaction id
             <Link to={`/bank/transactions/${transaction.id}`} >
               <div className="table-row" key={transaction.id}>
                 <span className="col x4">

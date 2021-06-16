@@ -11,6 +11,7 @@ export default function TransactionDetail() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
+  //Getting transaction details...
   useEffect(() => {
     const fetchTransactionById = async() => {
 
@@ -36,6 +37,7 @@ export default function TransactionDetail() {
 
   }, [transactionId])
 
+  
   const renderTransactionContent = () => {
     if (isLoading) return <h1>Loading...</h1>
     if (error) return <p className="description">No transaction found</p>
